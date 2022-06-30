@@ -1,280 +1,46 @@
-Contribution: 2021-01-14 20:00
+# Advanced Sample Hardhat Project
 
-Contribution: 2021-01-14 20:01
+This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
 
-Contribution: 2021-01-14 20:02
+The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
 
-Contribution: 2021-01-14 20:03
+Try running some of the following tasks:
 
-Contribution: 2021-01-14 20:04
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+npx hardhat help
+REPORT_GAS=true npx hardhat test
+npx hardhat coverage
+npx hardhat run scripts/deploy.ts
+TS_NODE_FILES=true npx ts-node scripts/deploy.ts
+npx eslint '**/*.{js,ts}'
+npx eslint '**/*.{js,ts}' --fix
+npx prettier '**/*.{json,sol,md}' --check
+npx prettier '**/*.{json,sol,md}' --write
+npx solhint 'contracts/**/*.sol'
+npx solhint 'contracts/**/*.sol' --fix
+```
 
-Contribution: 2021-01-14 20:05
+# Etherscan verification
 
-Contribution: 2021-01-14 20:06
+To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
 
-Contribution: 2021-01-14 20:07
+In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
 
-Contribution: 2021-01-14 20:08
+```shell
+hardhat run --network ropsten scripts/sample-script.ts
+```
 
-Contribution: 2021-01-14 20:09
+Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
 
-Contribution: 2021-01-14 20:10
+```shell
+npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
+```
 
-Contribution: 2021-01-14 20:11
+# Performance optimizations
 
-Contribution: 2021-01-14 20:12
-
-Contribution: 2021-01-14 20:13
-
-Contribution: 2021-01-14 20:14
-
-Contribution: 2021-01-14 20:15
-
-Contribution: 2021-01-15 20:00
-
-Contribution: 2021-01-15 20:01
-
-Contribution: 2021-01-16 20:00
-
-Contribution: 2021-01-16 20:01
-
-Contribution: 2021-01-16 20:02
-
-Contribution: 2021-01-16 20:03
-
-Contribution: 2021-01-17 20:00
-
-Contribution: 2021-01-17 20:01
-
-Contribution: 2021-01-17 20:02
-
-Contribution: 2021-01-17 20:03
-
-Contribution: 2021-01-17 20:04
-
-Contribution: 2021-01-17 20:05
-
-Contribution: 2021-01-17 20:06
-
-Contribution: 2021-01-17 20:07
-
-Contribution: 2021-01-17 20:08
-
-Contribution: 2021-01-17 20:09
-
-Contribution: 2021-01-17 20:10
-
-Contribution: 2021-01-17 20:11
-
-Contribution: 2021-01-17 20:12
-
-Contribution: 2021-01-17 20:13
-
-Contribution: 2021-01-17 20:14
-
-Contribution: 2021-01-18 20:00
-
-Contribution: 2021-01-18 20:01
-
-Contribution: 2021-01-18 20:02
-
-Contribution: 2021-01-18 20:03
-
-Contribution: 2021-01-18 20:04
-
-Contribution: 2021-01-18 20:05
-
-Contribution: 2021-01-18 20:06
-
-Contribution: 2021-01-18 20:07
-
-Contribution: 2021-01-18 20:08
-
-Contribution: 2021-01-18 20:09
-
-Contribution: 2021-01-18 20:10
-
-Contribution: 2021-01-18 20:11
-
-Contribution: 2021-01-18 20:12
-
-Contribution: 2021-01-18 20:13
-
-Contribution: 2021-01-21 20:00
-
-Contribution: 2021-01-21 20:01
-
-Contribution: 2021-01-21 20:02
-
-Contribution: 2021-01-21 20:03
-
-Contribution: 2021-01-21 20:04
-
-Contribution: 2021-01-21 20:05
-
-Contribution: 2021-01-21 20:06
-
-Contribution: 2021-01-22 20:00
-
-Contribution: 2021-01-22 20:01
-
-Contribution: 2021-01-22 20:02
-
-Contribution: 2021-01-22 20:03
-
-Contribution: 2021-01-22 20:04
-
-Contribution: 2021-01-22 20:05
-
-Contribution: 2021-01-22 20:06
-
-Contribution: 2021-01-22 20:07
-
-Contribution: 2021-01-22 20:08
-
-Contribution: 2021-01-22 20:09
-
-Contribution: 2021-01-22 20:10
-
-Contribution: 2021-01-22 20:11
-
-Contribution: 2021-01-22 20:12
-
-Contribution: 2021-01-22 20:13
-
-Contribution: 2021-01-22 20:14
-
-Contribution: 2021-01-22 20:15
-
-Contribution: 2021-01-22 20:16
-
-Contribution: 2021-01-22 20:17
-
-Contribution: 2021-01-22 20:18
-
-Contribution: 2021-01-22 20:19
-
-Contribution: 2021-01-23 20:00
-
-Contribution: 2021-01-23 20:01
-
-Contribution: 2021-01-23 20:02
-
-Contribution: 2021-01-23 20:03
-
-Contribution: 2021-01-23 20:04
-
-Contribution: 2021-01-23 20:05
-
-Contribution: 2021-01-23 20:06
-
-Contribution: 2021-01-23 20:07
-
-Contribution: 2021-01-27 20:00
-
-Contribution: 2021-01-27 20:01
-
-Contribution: 2021-01-27 20:02
-
-Contribution: 2021-01-27 20:03
-
-Contribution: 2021-01-27 20:04
-
-Contribution: 2021-01-27 20:05
-
-Contribution: 2021-01-27 20:06
-
-Contribution: 2021-01-27 20:07
-
-Contribution: 2021-01-27 20:08
-
-Contribution: 2021-01-27 20:09
-
-Contribution: 2021-01-27 20:10
-
-Contribution: 2021-01-28 20:00
-
-Contribution: 2021-01-28 20:01
-
-Contribution: 2021-01-28 20:02
-
-Contribution: 2021-01-28 20:03
-
-Contribution: 2021-01-28 20:04
-
-Contribution: 2021-01-28 20:05
-
-Contribution: 2021-01-28 20:06
-
-Contribution: 2021-01-28 20:07
-
-Contribution: 2021-01-28 20:08
-
-Contribution: 2021-01-28 20:09
-
-Contribution: 2021-01-28 20:10
-
-Contribution: 2021-01-28 20:11
-
-Contribution: 2021-01-28 20:12
-
-Contribution: 2021-01-28 20:13
-
-Contribution: 2021-01-29 20:00
-
-Contribution: 2021-01-29 20:01
-
-Contribution: 2021-01-29 20:02
-
-Contribution: 2021-01-29 20:03
-
-Contribution: 2021-01-29 20:04
-
-Contribution: 2021-01-29 20:05
-
-Contribution: 2021-01-29 20:06
-
-Contribution: 2021-01-29 20:07
-
-Contribution: 2021-01-29 20:08
-
-Contribution: 2021-01-29 20:09
-
-Contribution: 2021-01-29 20:10
-
-Contribution: 2021-01-29 20:11
-
-Contribution: 2021-01-29 20:12
-
-Contribution: 2021-01-29 20:13
-
-Contribution: 2021-01-30 20:00
-
-Contribution: 2021-01-30 20:01
-
-Contribution: 2021-01-30 20:02
-
-Contribution: 2021-01-30 20:03
-
-Contribution: 2021-01-30 20:04
-
-Contribution: 2021-01-30 20:05
-
-Contribution: 2021-01-31 20:00
-
-Contribution: 2021-01-31 20:01
-
-Contribution: 2021-01-31 20:02
-
-Contribution: 2021-01-31 20:03
-
-Contribution: 2021-01-31 20:04
-
-Contribution: 2021-01-31 20:05
-
-Contribution: 2021-01-31 20:06
-
-Contribution: 2021-01-31 20:07
-
-Contribution: 2021-01-31 20:08
-
+For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
